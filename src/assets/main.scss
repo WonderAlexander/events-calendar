@@ -1,0 +1,139 @@
+// Variables
+$active: #0046b6;
+$main: #000000;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#app {
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.calendar__app {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: "Intro", Arial, sans-serif !important;
+
+    &-wrapper {
+        width: 100%;
+        max-width: 1160px;
+        height: auto;
+
+        background-color: #f4f4f4;
+        border-radius: 10px;
+
+        padding: 40px;
+
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width: 1200px) {
+
+    .birthdays__block {
+        width: 50%;
+        padding-left: 30px;
+    }
+    .birthdates {
+        width: 380px;
+    }
+
+    .events__item {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 1200px) {
+
+    .birthdays__block {
+        width: 50%;
+        padding-left: 30px;
+    }
+
+    .events__item {
+        font-size: 16px;
+    }
+
+    .birthdates__header {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 1100px) {
+    .birthdates {
+        width: 350px;
+    }
+}
+
+@media(max-width: 991px) {
+    .calendar__app-wrapper {
+        flex-wrap: wrap;
+    }
+    .birthdays__block {
+        padding: 0;
+        width: 100%;
+    }
+    .birthdates {
+        width: 100%;
+    }
+    .calendar__block {
+        width: 100%;
+    }
+
+    .calendar {
+        width: 100%;    
+    }
+}
+
+@media(max-width: 600px) {
+    .calendar__app-wrapper  {
+        padding: 20px
+    }
+    .overlay__inner-popup {
+        width: 380px;
+    }
+
+    .birthdays__fio {
+        font-size: 14px;
+    }
+    
+    .overlay__inner-popup .popup__title {
+        font-size: 20px;
+    }
+
+    .events__item {
+        font-size: 14px;
+    }
+
+    .calendar__dates {
+        gap: 5px;
+    }
+
+    .calendar__header {
+        gap: 10px;
+    }
+
+    .calendar__dates-item-num {
+        top: -5px;
+        right: 5%;
+    }
+}
