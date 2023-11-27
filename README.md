@@ -1,29 +1,36 @@
-# vue-calendar
+# Календарь событий Vue.js
+Простой календарь с отображением событий и дней рождения сотрудников за год. Это реальный проект, поэтому все данные были заменены на плейсхолдеры.
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+## Стек
+- [Vue3](https://v3.ru.vuejs.org/)
+- [Pinia](https://pinia.vuejs.org/)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Функционал 
+Календарь позволяет выводить события и сведения о днях рождения сотрудников из стора в Pinia. Автоматически вычисляется сегодняшнее число и месяц.
 
-## Customize configuration
+## Демо
+[Демо-версия](https://wonderalexander.ru/events-calendar/)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Использование
 
-## Project Setup
-
+### Установка зависимостей
+Для установки зависимостей, выполните команду:
 ```sh
-npm install
+$ npm install
 ```
 
-### Compile and Hot-Reload for Development
-
+### Запуск Development сервера
+Чтобы запустить сервер для разработки, выполните команду:
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
-
+### Создание билда
+Чтобы выполнить production сборку, выполните команду: 
 ```sh
-npm run build
+npx run build
 ```
+
+## Команда проекта
+Александр Болдин — Front-End
