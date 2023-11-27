@@ -107,7 +107,7 @@
           <li @click="showBirthday = false, showEvents = true" class="calendar__cat-item" :class="{ active__cat: showEvents}">
             <a>События</a>
           </li>
-        
+
           <li @click=" showBirthday = true, showEvents = false, calendarDates.getCurrentMonthBirthdays(calendarDates.calendar, activeMonth, monthBirthdays)" class="calendar__cat-item" :class="{ active__cat: showBirthday}">
             <a>Сотрудники</a>
           </li>
@@ -148,7 +148,7 @@
           <div @click="showEventsPopup = true,showMonthEvents = false, body.style.overflow = 'hidden'" v-if="eventsArr.length !== 0" v-for="event in eventsArr" class="events__item today" style="cursor: pointer;">{{ event.name }}<div class="events__item-icon"><span class="right"></span></div></div>
           <p v-if="eventsArr.length === 0">Нет событий</p>
         </div>
-        
+
         <!-- Блок с событиями за месяц -->
         <div class="birthdates">
           <h3 class="birthdates__header">События в этом месяце:</h3>
@@ -163,7 +163,7 @@
           <h3 class="birthdates__header">{{ newDate }} день рождения отмечают:</h3>
           <div class="today" v-if="birthdayArr.length !== 0" v-for="birthday in birthdayArr">
               <div class="birthdays__fio"><b style="color: #fff;">{{ birthday.split('(')[0] }}</b></div>
-              <div class="birthdays__job">({{ birthday.split('(')[1] }}</div>            </div>
+              <div class="birthdays__job">{{ birthday.split('(')[1] }}</div>            </div>
           <p v-if="birthdayArr.length === 0">Нет событий</p>
         </div>
 
@@ -173,7 +173,7 @@
           <div v-for="birthday in monthBirthdays.slice(0, 3)">
             <div v-for="item in birthday.birthdate" class="month__birthdays">
               <div class="birthdays__fio"><b>{{ item.split('(')[0] }}</b></div>
-              <div class="birthdays__job">({{ item.split('(')[1]}}</div>
+              <div class="birthdays__job">{{ item.split('(')[1]}}</div>
               <div v-if="activeMonth !== 'Май'" class="birtdays__date">{{ birthday.date }}<br>{{ activeMonth.slice(0,3).toLowerCase() + '.' }}</div>
               <div v-if="activeMonth === 'Май'" class="birtdays__date">{{ birthday.date }}<br>мая</div>
             </div>
@@ -182,7 +182,7 @@
         </div>
         <button v-if="monthBirthdays.length > 3" class="birthday__btn birthday__btn-month" @click="showBirthdayPopup = true, showMonthBirthdays = true, body.style.overflow = 'hidden'">Показать больше</button>
       </div>
-      
+
     </div>
   </div>
 
@@ -241,7 +241,7 @@
               <div v-for="birthday in monthBirthdays">
                 <div v-for="item in birthday.birthdate" class="month__birthdays">
                   <div class="birthdays__fio"><b>{{ item.split('(')[0] }}</b></div>
-                  <div class="birthdays__job">({{ item.split('(')[1]}}</div>
+                  <div class="birthdays__job">{{ item.split('(')[1]}}</div>
                   <!-- <div class="birtdays__date">{{ birthday.date }}<br>{{ activeMonth.slice(0,3).toLowerCase() + '.' }}</div> -->
                   <div v-if="activeMonth !== 'Май'" class="birtdays__date">{{ birthday.date }}<br>{{ activeMonth.slice(0,3).toLowerCase() + '.' }}</div>
                   <div v-if="activeMonth === 'Май'" class="birtdays__date">{{ birthday.date }}<br>мая</div>
@@ -454,7 +454,7 @@
   transition: all .2s ease-in-out;
   background-color: #0046b6 !important;
   color: #fff !important;
-} 
+}
 
 .events__item:hover .events__item-icon > .right {
   background-color: #0046b6;
@@ -545,7 +545,7 @@ transition: all .2s ease-in-out;
           opacity: 1;
 
           cursor: pointer;
-        
+
         &:hover {
           opacity: 1;
         }
@@ -566,7 +566,7 @@ transition: all .2s ease-in-out;
 
         }
 
-        
+
 
         &__title {
           // text-transform: lowercase;
